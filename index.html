@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidade - Bodinhos de Sorte</title>
+  <style>
+    :root {
+      /* Paleta do app (Login) */
+      --tealDark: #0E7A73;
+      --teal: #15B39E;
+      --gold: #FFD54F;
+
+      /* Base */
+      --bg0: #062E2B;
+      --bg1: #0B5B54;
+      --card: rgba(255,255,255,0.10);
+      --card2: rgba(255,255,255,0.06);
+      --text: #F7F7F7;
+      --muted: rgba(255,255,255,0.72);
+      --border: rgba(255,255,255,0.12);
+      --shadow: rgba(0,0,0,0.45);
+      --link: var(--gold);
+      --accent: var(--gold);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(255,213,79,0.16), transparent 40%),
+        radial-gradient(circle at 85% 15%, rgba(21,179,158,0.22), transparent 45%),
+        linear-gradient(135deg, var(--tealDark), var(--teal));
+      min-height: 100vh;
+    }
+
+    .wrapper {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 16px 52px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: radial-gradient(circle at top left,
+        rgba(255,213,79,0.18),
+        rgba(255,255,255,0.06));
+      backdrop-filter: blur(8px);
+      margin-bottom: 14px;
+    }
+
+    .badge-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: #0A3F3A;
+      background: radial-gradient(circle at 30% 20%, #fff3c4, var(--gold) 55%, rgba(255,213,79,0.55));
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+    }
+
+    h1 {
+      font-size: 2.0rem;
+      margin: 0 0 6px;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.98rem;
+      margin: 0;
+    }
+
+    .chip {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.78);
+      background: rgba(255,255,255,0.06);
+    }
+
+    main.card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.06));
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px 20px;
+      box-shadow:
+        0 18px 42px var(--shadow),
+        0 0 0 1px rgba(255,255,255,0.02);
+      backdrop-filter: blur(10px);
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin: 26px 0 10px;
+      color: var(--accent);
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      margin: 18px 0 8px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    p { margin: 0 0 10px; }
+
+    ul {
+      margin: 0 0 14px 18px;
+      padding-left: 10px;
+    }
+    li + li { margin-top: 4px; }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+      font-weight: 650;
+    }
+    a:hover { text-decoration: underline; }
+
+    .muted {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .callout {
+      margin-top: 12px;
+      padding: 14px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,213,79,0.35);
+      background: rgba(255,213,79,0.10);
+      color: rgba(255,255,255,0.92);
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(255,255,255,0.14);
+      margin: 18px 0 4px;
+    }
+
+    footer {
+      margin-top: 22px;
+      text-align: center;
+      color: rgba(255,255,255,0.70);
+      font-size: 0.86rem;
+    }
+
+    @media (min-width: 720px) {
+      main.card { padding: 30px 34px; }
+      h1 { font-size: 2.15rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="badge">
+        <div class="badge-icon">BS</div>
+        <span>Política de Privacidade · Bodinhos de Sorte</span>
+      </div>
+      <h1>Política de Privacidade</h1>
+      <p class="subtitle">
+        Este documento explica como o aplicativo <strong>Bodinhos de Sorte</strong> coleta,
+        utiliza e protege seus dados pessoais.
+      </p>
+      <div class="chip">Última atualização: 14/12/2025</div>
+    </header>
+
+    <main class="card">
+      <h2>1. Quem somos</h2>
+      <p>
+        O <strong>Bodinhos de Sorte</strong> é um aplicativo que permite ao usuário criar e gerenciar sua conta,
+        adquirir e registrar números/bilhetes, acompanhar histórico de participações e receber notificações
+        relacionadas ao funcionamento do app (por exemplo: avisos e atualizações).
+      </p>
+      <p class="muted">
+        Para fins desta política, quando mencionamos “nós”, “nosso” ou “Bodinhos de Sorte”, estamos nos referindo
+        ao controlador do aplicativo e à sua equipe responsável pela operação.
+      </p>
+
+      <h2>2. Quais dados coletamos</h2>
+      <p>Podemos coletar as seguintes categorias de dados pessoais:</p>
+      <ul>
+        <li>
+          <strong>Dados de conta:</strong> e-mail, senha (gerenciada com segurança pelo
+          <strong>Firebase Authentication</strong>) e identificadores de usuário (ex.: UID).
+        </li>
+        <li>
+          <strong>Dados de uso e funcionamento:</strong> registros de ações dentro do app (ex.: telas acessadas,
+          interações e datas/horários) e informações técnicas necessárias para operação e diagnóstico.
+        </li>
+        <li>
+          <strong>Dados de dispositivo:</strong> informações como modelo do aparelho, sistema operacional, idioma
+          e identificadores técnicos (quando aplicável).
+        </li>
+        <li>
+          <strong>Notificações:</strong> token de push/FCM e preferências relacionadas ao recebimento de notificações.
+        </li>
+        <li>
+          <strong>Dados de participações:</strong> números/bilhetes gerados ou registrados, histórico por concurso
+          e dados associados (ex.: destino/modalidade, timestamps e status).
+        </li>
+        <li>
+          <strong>Pagamentos/contratações:</strong> registros necessários para confirmar contratações e controle interno
+          (ex.: pacote selecionado, valor, data/hora e status). <strong>Não</strong> coletamos senha bancária.
+        </li>
+        <li>
+          <strong>Armazenamento local:</strong> cache e dados locais no dispositivo (ex.: sessão, preferências e chaves
+          técnicas) para melhorar a experiência e reduzir atritos.
+        </li>
+      </ul>
+
+      <h2>3. Como usamos seus dados</h2>
+      <p>Utilizamos seus dados pessoais para:</p>
+      <ul>
+        <li>Criar e gerenciar sua conta e autenticação;</li>
+        <li>Permitir acesso às funcionalidades do aplicativo e ao seu histórico;</li>
+        <li>Operar o app com estabilidade, performance e segurança (prevenção de abuso e fraudes);</li>
+        <li>Enviar comunicações importantes e notificações operacionais (quando habilitadas);</li>
+        <li>Atender solicitações de suporte e contatos do usuário;</li>
+        <li>Cumprir obrigações legais e responder a solicitações válidas de autoridades competentes.</li>
+      </ul>
+
+      <div class="callout">
+        <strong>Observação:</strong> o app pode consultar e processar informações públicas de resultados para
+        fins de verificação/consulta no contexto das funcionalidades oferecidas. Esta política trata apenas do
+        tratamento de dados pessoais do usuário dentro do aplicativo.
+      </div>
+
+      <h2>4. Base legal (LGPD)</h2>
+      <p>
+        O tratamento de dados é realizado com fundamento nas bases legais previstas na Lei Geral de Proteção de
+        Dados (LGPD), incluindo, quando aplicável:
+      </p>
+      <ul>
+        <li><strong>Execução de contrato</strong> – para fornecer as funcionalidades do app;</li>
+        <li><strong>Consentimento</strong> – quando você autoriza, por exemplo, o recebimento de notificações;</li>
+        <li><strong>Cumprimento de obrigação legal</strong> – quando a legislação exigir retenção de registros;</li>
+        <li><strong>Legítimo interesse</strong> – para segurança, prevenção a fraudes e melhoria do serviço.</li>
+      </ul>
+
+      <h2>5. Compartilhamento de dados</h2>
+      <p>
+        Não vendemos nem alugamos seus dados pessoais. Podemos compartilhar dados nas seguintes situações:
+      </p>
+      <ul>
+        <li>
+          <strong>Provedores de serviço:</strong> utilizamos serviços de infraestrutura e nuvem, incluindo
+          <strong>Google Firebase</strong> (Authentication, Firestore, Cloud Messaging e componentes relacionados)
+          para armazenamento e processamento seguro.
+        </li>
+        <li>
+          <strong>Obrigação legal/autoridades:</strong> quando houver obrigação legal, ordem judicial ou requisição
+          válida de autoridade competente.
+        </li>
+        <li>
+          <strong>Proteção de direitos:</strong> quando necessário para proteger direitos, segurança do app e de usuários,
+          inclusive para investigação de abuso e fraude.
+        </li>
+      </ul>
+      <p class="muted">
+        Para mais detalhes sobre como o Google trata dados, consulte a
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+          Política de Privacidade do Google
+        </a>.
+      </p>
+
+      <h2>6. Armazenamento e segurança</h2>
+      <p>
+        Os dados são armazenados em provedores confiáveis (como o Firebase). Adotamos medidas técnicas e
+        organizacionais razoáveis para proteger informações contra acesso não autorizado, perda, destruição
+        ou alteração indevida.
+      </p>
+      <p class="muted">
+        Nenhum sistema é 100% seguro. Em caso de incidentes relevantes, buscaremos atuar com rapidez e transparência,
+        dentro do possível e do exigido pela legislação aplicável.
+      </p>
+
+      <h2>7. Retenção e exclusão de dados</h2>
+      <p>
+        Mantemos seus dados pessoais apenas pelo tempo necessário para cumprir as finalidades descritas nesta política,
+        salvo quando a lei exigir prazos maiores.
+      </p>
+      <p>
+        Você pode solicitar a exclusão da sua conta e dados pessoais, observadas as limitações legais e a necessidade
+        de preservação de informações para exercício regular de direitos em processos judiciais ou administrativos.
+      </p>
+
+      <h2>8. Seus direitos como titular de dados</h2>
+      <p>De acordo com a LGPD, você possui, entre outros, os seguintes direitos:</p>
+      <ul>
+        <li>Confirmar se tratamos ou não seus dados pessoais;</li>
+        <li>Acessar os dados que mantemos sobre você;</li>
+        <li>Corrigir dados incompletos, inexatos ou desatualizados;</li>
+        <li>Solicitar anonimização, bloqueio ou eliminação de dados desnecessários (quando aplicável);</li>
+        <li>Solicitar portabilidade (quando aplicável);</li>
+        <li>Revogar consentimento (quando o tratamento se basear nele);</li>
+        <li>Solicitar informações sobre compartilhamento com terceiros.</li>
+      </ul>
+      <p>
+        Para exercer seus direitos, utilize os canais de contato informados ao final deste documento.
+      </p>
+
+      <h2>9. Uso por menores de idade</h2>
+      <p>
+        O <strong>Bodinhos de Sorte</strong> não é direcionado a crianças. Caso a política do produto determine
+        restrição etária (por exemplo, <strong>18+</strong>), o acesso por menores é proibido.
+        Não coletamos intencionalmente dados de menores. Se identificarmos conta de menor, poderemos encerrá-la
+        e remover dados, conforme aplicável e permitido por lei.
+      </p>
+
+      <h2>10. Alterações nesta política</h2>
+      <p>
+        Esta Política de Privacidade pode ser atualizada periodicamente para refletir mudanças no aplicativo ou na
+        legislação. Publicaremos a nova versão nesta mesma página, indicando a data de atualização.
+      </p>
+
+      <h2>11. Contato</h2>
+      <p>
+        Em caso de dúvidas, solicitações relacionadas a dados pessoais ou exercício de direitos sob a LGPD,
+        entre em contato:
+      </p>
+      <ul>
+        <li><strong>Responsável:</strong> Equipe Bodinhos de Sorte</li>
+        <li><strong>E-mail:</strong> <a href="mailto:esperancatecnologias@gmail.com">esperancatecnologias@gmail.com</a></li>
+      </ul>
+
+      <div class="divider"></div>
+
+      <p class="muted">
+        Este documento tem caráter informativo e não substitui consulta a profissional jurídico. Recomenda-se adaptar
+        o texto à realidade do seu negócio e, se possível, validá-lo com um advogado.
+      </p>
+    </main>
+
+    <footer>
+      &copy; <span id="year"></span> Bodinhos de Sorte. Todos os direitos reservados.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
